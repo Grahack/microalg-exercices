@@ -1,0 +1,113 @@
+(!!! "version du 7 (le vrai) janvier 2015 21h43")
+
+(Afficher " Bienvenue dans le tutoriel sur les Listes II, le retour. ")
+(Afficher " Au fur et à mesure que vous avancerez dans le tuto, vous ")
+(Afficher " pourrez supprimer ces affichages de présentation ou      ")
+(Afficher " d’explications, tout en gardant certaines instructions   ")
+(Afficher " (sorte de mémo).                                         ")
+
+(bye)
+
+(Afficher " L’instruction (bye) ci-dessus arrête le programme. Elle  ")
+(Afficher " permet de ne pas afficher tout d’un coup. Une fois un    ")
+(Afficher " paragraphe terminé, vous pourrez supprimer ce (bye)      ")
+(Afficher " après le paragraphe d’après.                             ")
+(Afficher "                                                          ")
+(Afficher " Mais commençons !                                        ")
+(Afficher "                                                          ")
+
+(bye)
+
+(Afficher " On considère ici une liste de listes :                   ")
+(Initialiser ll (Liste (Liste 1 2) (Liste 3 4) (Liste 5 6)))
+(Afficher ll)
+(Afficher " On peut la parcourir pour afficher chaque sous-liste :   ")
+
+(!!! "Algo parcours 1")
+(Initialiser i 1)
+(Tant_que (<= i (Longueur ll)) Faire
+    (Afficher (Nieme ll i))
+    (Affecter_a i (+ i 1))
+)
+(!!! "Fin algo 1")
+
+(bye)
+
+(Afficher " Modifier l’algorithme précédent (recopié ci-dessous)     ")
+(Afficher " de telle sorte qu’au lieu d’afficher une sous-liste, un  ")
+(Afficher " sous-parcours est effectué pour en afficher les éléments.")
+(Afficher " Vous devrez obtenir les nombres de 1 à 6,                ")
+(Afficher " dans l’ordre, et chacun sur sa ligne.                    ")
+(Afficher " Indice: remplacer (Afficher (Nieme ll i)) par un         ")
+(Afficher " `Tant_que`. Vous devrez sans doute utiliser `Nieme` deux ")
+(Afficher " fois, peut-être même les imbriquer.")
+
+(!!! "Algo parcours 2")
+(Initialiser i 1)
+(Tant_que (<= i (Longueur ll)) Faire
+    (Afficher (Nieme ll i))
+    (Affecter_a i (+ i 1))
+)
+(!!! "Fin algo 2")
+
+(bye)
+
+(Afficher " Voici la solution du dernier exercice. Ce parcours de    ")
+(Afficher " liste de liste sera appelé le parcours « canonique ».    ")
+(Afficher " L’affichage de i et de j nous permet de voir que la      ")
+(Afficher " variable de la boucle intérieure « tourne plus vite »    ")
+(Afficher " que l’autre.")
+
+(!!! "Algo parcours canonique")
+(Initialiser i 1)
+(Tant_que (<= i (Longueur ll)) Faire
+    (Initialiser j 1)
+    (Tant_que (<= j 2) Faire
+        (Afficher (Nieme (Nieme ll i) j))
+        (Afficher (Concatener "i vaut " i " et j vaut " j))
+        (Affecter_a j (+ j 1))
+    )
+    (Affecter_a i (+ i 1))
+)
+(!!! "Fin algo parcours canonique")
+
+(bye)
+
+(Afficher " Avec `Definir`, écrire une procédure qui affiche une     ")
+(Afficher " liste de liste sous forme de matrice, les sous-listes    ")
+(Afficher " étant considérées comme étant les lignes de la matrice,  ")
+(Afficher " puis idem pour les colonnes de la matrice. Vous les      ")
+(Afficher " appelerez `Afficher_comme_lignes` et                     ")
+(Afficher " `Afficher_comme_colonnes`.                               ")
+(Afficher " En clair, on veut que `(Afficher_comme_lignes ll)` donne ")
+(Afficher " 1 2                                                      ")
+(Afficher " 3 4                                                      ")
+(Afficher " 5 6                                                      ")
+(Afficher " Et on veut que `(Afficher_comme_colonnes ll)` donne      ")
+(Afficher " 1 3 5                                                    ")
+(Afficher " 2 4 6                                                    ")
+
+(bye)
+
+(Afficher " Toujours avec `Definir`, écrire une fonction prenant     ")
+(Afficher " deux entiers strictement positifs m et n en paramètre et ")
+(Afficher " retournant une liste de longueur n contenant des listes  ")
+(Afficher " de longueur m pleines de zéros. Appelons cette procédure ")
+(Afficher " `matrice_mxn`.                                           ")
+
+(bye)
+
+(Afficher " En utilisant vos deux dernières créations, écrire huit   ")
+(Afficher " parcours qui vont remplir des matrices 3×2 avec les      ")
+(Afficher " nombres entiers de 1 à 6 de façons à obtenir :           ")
+(Afficher " 1) 1 4   2) 4 1   3) 3 6   4) 6 3                        ")
+(Afficher "    2 5      5 2      2 5      5 2                        ")
+(Afficher "    3 6      6 3      1 4      4 1                        ")
+(Afficher "                                                          ")
+(Afficher " 5) 1 2   6) 2 1   7) 5 6   8) 6 5                        ")
+(Afficher "    3 4      4 3      3 4      4 3                        ")
+(Afficher "    5 6      6 5      1 2      2 1                        ")
+(Afficher "                                                          ")
+(Afficher " Vous avez carte blanche pour la stratégie de parcours.   ")
+
+(bye)

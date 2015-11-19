@@ -1,0 +1,116 @@
+(!!! "version du 7 janvier 2015 22h40")
+
+(Afficher " Bienvenue dans le tutoriel sur les Listes.               ")
+(Afficher " Au fur et à mesure que vous avancerez dans le tuto, vous ")
+(Afficher " pourrez supprimer ces affichages de présentation ou      ")
+(Afficher " d’explications, tout en gardant certaines instructions   ")
+(Afficher " (sorte de mémo).                                         ")
+
+(bye)
+
+(Afficher " L’instruction (bye) ci-dessus arrête le programme. Elle  ")
+(Afficher " permet de ne pas afficher tout d’un coup. Une fois un    ")
+(Afficher " paragraphe terminé, vous pourrez supprimer ce (bye)      ")
+(Afficher " après le paragraphe d’après.                             ")
+(Afficher "                                                          ")
+(Afficher " Mais commençons !                                        ")
+(Afficher "                                                          ")
+
+(bye)
+
+(Afficher " On peut ajouter un élément à une liste grâce à la        ")
+(Afficher " commande `Ajouter_a`.                                    ")
+(Initialiser ma_liste (Liste))
+(Afficher ma_liste)
+(Ajouter_a ma_liste 42)
+(Afficher ma_liste)
+(Ajouter_a ma_liste "bonjour")
+(Ajouter_a ma_liste Vrai)
+(Afficher ma_liste)
+(Afficher " Les « backslashes » avant les guillemets de « bonjour »  ")
+(Afficher " servent à les « échapper ».                              ")
+(Afficher " Rien de grave pour le travail sur les listes.            ")
+
+(bye)
+
+(Initialiser liste_nombres (Liste -3 1 17 -12 50 -1 0 31 -17 6))
+(Afficher " Voici une liste de nombres :                             ")
+(Afficher liste_nombres)
+
+(Afficher " Que fait l’algorithme suivant ?                          ")
+(!!! "Algo mystère n°1")
+(Initialiser var_mystere (Liste))
+(Afficher var_mystere)
+(Initialiser i 1)
+(Tant_que (<= i (Longueur liste_nombres)) Faire
+    (Ajouter_a var_mystere (Nieme liste_nombres i))
+    (Affecter_a i (+ i 1))
+)
+(Afficher var_mystere)
+(!!! "Fin algo mystère n°1")
+
+(Afficher " Appelez le professeur sans hurler la réponse dès que     ")
+(Afficher " vous avez trouvé.                                        ")
+
+(bye)
+
+(Afficher " Modifier l’algorithme de copie ci-dessous pour que la    ")
+(Afficher " liste copiée ne contienne que les nombres positif de la  ")
+(Afficher " liste originale.                                         ")
+(!!! "Algo copie")
+(Initialiser liste_nombres (Liste -3 1 17 -12 50 -1 0 31 -17 6))
+(Initialiser copie (Liste))
+(Afficher copie)
+(Initialiser i 1)
+(Tant_que (<= i (Longueur liste_nombres)) Faire
+    (Ajouter_a copie (Nieme liste_nombres i))
+    (Affecter_a i (+ i 1))
+)
+(Afficher copie)
+(!!! "Fin algo copie")
+
+(Afficher " Dès que c’est fait, appelez le professeur.               ")
+
+(bye)
+
+(Afficher " Reprenons la liste du début de ce fichier.               ")
+(Initialiser ma_liste (Liste 42 "bonjour" Vrai))
+(Afficher ma_liste)
+(Afficher " On peut modifier la valeur d’un élément grâce à la       ")
+(Afficher " commande `Affecter_a` (la même que d’habitude) mais avec ")
+(Afficher " le mot-clé `En_position`.                                ")
+(Afficher ma_liste)
+(Affecter_a ma_liste 7 En_position 1)
+(Afficher ma_liste)
+(Afficher " Remarquez qu’on a remplacé le premier élément (en        ")
+(Afficher " position 1) par un 7.                                    ")
+
+(bye)
+
+(Initialiser liste_nombres (Liste -3 1 17 -12 50 -1 0 31 -17 6))
+(Afficher " Écrire un algorithme qui modifie `liste_nombres` de      ")
+(Afficher " façon à remplacer les nombres négatifs par des zéros.    ")
+(Afficher " Vous ferez un affichage « avant » et un affichage        ")
+(Afficher " « après », puis vous appelerez le professeur.            ")
+
+(bye)
+
+(!!! "Algo dés")
+(Initialiser i 1)
+(Tant_que (<= i 60) Faire
+    (Afficher (rand 1 6))
+    (Affecter_a i (+ i 1))
+)
+(!!! "Fin algo dés")
+
+(Afficher " L’algorithme précédant affiche 60 entiers tirés au sort  ")
+(Afficher " entre 1 et 6 compris (comme un dé à 6 faces).            ")
+(Afficher " On veut compter le nombre de tirages de chaque face, mais")
+(Afficher " plutôt que d’utiliser six compteurs, on va utiliser une  ")
+(Afficher " liste de six entiers valant tous 0 au départ de l’algo.  ")
+(Afficher " Modifiez cet algorithme pour qu’il affiche la liste      ")
+(Afficher " contenant les compteurs à l’issue du tirage des 60 dés.  ")
+(Afficher " Indice: utiliser                                         ")
+(Afficher " (Initialiser compteurs (Liste 0 0 0 0 0 0))")
+
+(bye)

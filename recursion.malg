@@ -1,0 +1,126 @@
+(!!! "version du 27 février 2015")
+
+(Afficher " Bienvenue dans le tutoriel sur la récursivité.           ")
+(Afficher " Au fur et à mesure que vous avancerez dans le tuto, vous ")
+(Afficher " pourrez supprimer ces affichages de présentation ou      ")
+(Afficher " d’explications, tout en gardant certaines instructions   ")
+(Afficher " (sorte de mémo).                                         ")
+
+(bye)
+
+(Afficher " L’instruction (bye) ci-dessus arrête le programme. Elle  ")
+(Afficher " permet de ne pas afficher tout d’un coup. Une fois un    ")
+(Afficher " paragraphe terminé, vous pourrez supprimer ce (bye)      ")
+(Afficher " après le paragraphe d’après.                             ")
+(Afficher "                                                          ")
+(Afficher " Mais commençons !                                        ")
+(Afficher "                                                          ")
+
+(bye)
+
+(Afficher " Pour commencer, essayez de deviner ce que fait le        ")
+(Afficher " le programme suivant. SANS TRICHER ! N’enlevez le        ")
+(Afficher " (bye) qu’après avoir eu une petite idée.                 ")
+
+(bye)
+
+(!!! "Début du premier programme")
+(Definir (Boucle)
+    "Commande récursive idiote."
+    "ProfGra"
+    (Afficher "Bonjour!")
+    (Boucle)
+    (Retourner Rien)
+)
+(Boucle)
+(!!! "Fin du premier programme")
+
+(Afficher " Voit-on s’afficher cette phrase une fois que le          ")
+(Afficher " programme ci-dessus s’est terminé ?                      ")
+(Afficher " Pour plus d’informations, voir cette page :              ")
+(Afficher " <http://galerie.microalg.info/microalg:recursion_infinie>")
+
+(bye)
+
+(Afficher " Nous allons écrire une procédure récursive qui demande   ")
+(Afficher " un nombre positif à l’utilisateur. La procédure ne       ")
+(Afficher " retournera ce nombre que s’il est positif, sinon elle    ")
+(Afficher " demandera à l’utilisateur de recommencer la saisie.      ")
+(Afficher " Le plus gros du travail a été fait ! À vous de remplacer ")
+(Afficher " les Rien par ce qu’il faut.")
+
+(Definir (Entree_positive)
+    "Retourne la valeur tapée par l’utilisateur avec contrôle de saisie."
+    "vous"
+    (Afficher "Veuillez entrer une valeur positive.")
+    (Initialiser valeur (Nombre (Demander)))
+    (Si (>= valeur 0)
+     Alors
+        (Retourner Rien)
+     Sinon
+        (Retourner Rien)
+    )
+)
+
+(Initialiser valeur_positive (Entree_positive))
+(Afficher valeur_positive)
+
+(bye)
+
+(Afficher " Retrouver la fonction récursive qui calcule la           ")
+(Afficher " factorielle d’un nombre entier (vue en cours).           ")
+(Afficher " Les non matheux peuvent sauter cet exercice.             ")
+(Afficher " Le plus gros du travail a encore été fait ! À vous de    ")
+(Afficher " remplacer Vrai et les Rien par ce qu’il faut.            ")
+
+(Definir (facto n)
+    "Retourne la factorielle de l’entier `n` passé en paramètre."
+    "vous"
+    (Si Vrai
+     Alors
+        (Retourner Rien)
+     Sinon
+        (Retourner Rien)
+    )
+)
+(Exemples_de facto
+    (Liste
+        (? 1) 1
+        (? 2) 2
+        (? 3) 6
+        (? 4) 24
+        (? 5) 120
+    )
+)
+(Tester facto)
+
+(bye)
+
+(Afficher " Pour les littéraires (et les autres) voici une commande  ")
+(Afficher " récursive qui affiche une à une les lettres du texte     ")
+(Afficher " passé en paramètre.                                      ")
+(Afficher " Saurez-vous la modifier pour qu’elle n’épèle que le      ")
+(Afficher " premier mot ?                                            ")
+(Afficher " Rappels :                                                ")
+(Afficher "     <http://microalg.info/doc.html#cmd-Tete>             ")
+(Afficher "     <http://microalg.info/doc.html#cmd-Queue>            ")
+
+(Definir (Epeler texte)
+    "Épèle le texte passé en paramètre."
+    "ProfGra"
+    (Si (Non (Vide? texte))
+     Alors
+        (Afficher (Tete texte))
+        (Epeler (Queue texte))
+    )
+    (Retourner Rien)
+)
+(Epeler "Bonjour tout le monde !")
+
+(bye)
+
+(Afficher " Si vous êtes arrivé jusqu’ici, bravo. D’autres exercices ")
+(Afficher " vous attendent ici :                                     ")
+(Afficher " <http://profgra.org/lycee/BTS-SIO1-U22-05_Recursivite_exos.html#produit-et-puissance> ")
+
+(bye)
